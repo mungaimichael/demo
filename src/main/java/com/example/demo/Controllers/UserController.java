@@ -1,6 +1,6 @@
 package com.example.demo.Controllers;
 
-import com.example.demo.data_transfer_object.User ;
+import com.example.demo.data_transfer_object.Users ;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +18,8 @@ public class UserController {
 
 
     @PostMapping("/login")
-    public String getUser (@RequestBody User user){
-        return user.getEmail();
+    public Users getUser (@RequestBody Users user){
+        return user;
     }
 
     
