@@ -4,11 +4,27 @@ package com.example.demo.data_transfer_object;
 //should not have any business logic
 //represents data from an entitu
 
-public class User {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
+
+public class Users {
+    @Id
+    private Integer id;
+
     private  String username;
     private  String email ;
 
-    User (String u, String e ){
+    // default constructor to use in table
+
+    public Users() {
+
+    }
+
+    Users (String u, String e ){
         this.email = e;
         this.username = u;
     }
